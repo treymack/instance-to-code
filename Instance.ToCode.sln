@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheProject", "src\TheProject\TheProject.csproj", "{DD3B80EF-CAB2-41A4-8F2E-13CCC386C83D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{43AE97CA-6322-4974-B5F9-2A42D30AC5BF}"
+	ProjectSection(SolutionItems) = preProject
+		rakefile.rb = rakefile.rb
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{2CFB728D-8DA7-440A-A095-5DAF46D44BC2}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD3B80EF-CAB2-41A4-8F2E-13CCC386C83D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD3B80EF-CAB2-41A4-8F2E-13CCC386C83D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD3B80EF-CAB2-41A4-8F2E-13CCC386C83D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD3B80EF-CAB2-41A4-8F2E-13CCC386C83D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

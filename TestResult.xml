@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\tmack\Documents\GitHub\instance-to-code\src\TheProject\bin\Debug\TheProject.dll" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2012-09-21" time="13:34:32">
+  <environment nunit-version="2.6.1.12217" clr-version="2.0.50727.5456" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Users\tmack\Documents\GitHub\instance-to-code" machine-name="TMACK-LAPTOP" user="tmack" user-domain="tmack-laptop" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\Users\tmack\Documents\GitHub\instance-to-code\src\TheProject\bin\Debug\TheProject.dll" executed="True" result="Failure" success="False" time="0.101" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="TheProject" executed="True" result="Failure" success="False" time="0.092" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="0.092" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="SimpleObject" executed="True" result="Failure" success="False" time="0.090" asserts="0">
+                <results>
+                  <test-case name="TheProject.Tests.SimpleObject.CanScriptToCode" executed="True" result="Error" success="False" time="0.083" asserts="0">
+                    <failure>
+                      <message><![CDATA[ApprovalTests.Core.Exceptions.ApprovalMismatchException : Failed Approval: Received file c:\Users\tmack\Documents\GitHub\instance-to-code\src\TheProject\Tests\SimpleObject.CanScriptToCode.received.txt does not match approved file c:\Users\tmack\Documents\GitHub\instance-to-code\src\TheProject\Tests\SimpleObject.CanScriptToCode.approved.txt.]]></message>
+                      <stack-trace><![CDATA[at ApprovalTests.Approvers.FileApprover.Fail()
+at ApprovalTests.Core.Approvals.Verify(IApprovalApprover approver, IApprovalFailureReporter reporter)
+at ApprovalTests.Approvals.Verify(IApprovalWriter writer, IApprovalNamer namer, IApprovalFailureReporter reporter)
+at ApprovalTests.Approvals.Verify(IApprovalWriter writer)
+at ApprovalTests.Approvals.Verify(String text)
+at TheProject.Tests.SimpleObject.CanScriptToCode() in c:\Users\tmack\Documents\GitHub\instance-to-code\src\TheProject\Tests\SimpleObject.cs:line 26
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

@@ -1,0 +1,6 @@
+new TheProject.Tests.SimpleObjectTestCase()
+{
+Int1 = 1,
+String1 = "slim shady",
+Double1 = 2.3,
+}
