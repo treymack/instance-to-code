@@ -1,0 +1,3 @@
+new TheProject.Tests.NestedClass.NestedClassTestCase()
+{
+}

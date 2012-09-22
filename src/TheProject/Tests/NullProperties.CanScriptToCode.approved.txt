@@ -1,0 +1,6 @@
+new TheProject.Tests.NullPropertiesTestCase()
+{
+NullableDateTime = null,
+String1 = null,
+TestCase2 = null,
+}

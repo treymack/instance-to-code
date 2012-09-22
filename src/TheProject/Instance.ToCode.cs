@@ -19,6 +19,12 @@ namespace TheProject
 
         private static void BuildCode(StringBuilder sb, object instance)
         {
+            if (instance == null)
+            {
+                sb.Append("null");
+                return;
+            }
+
             var instanceType = instance.GetType();
             if (instanceType.Equals(typeof(string)))
             {
@@ -34,7 +40,7 @@ namespace TheProject
                 return;
             }
 
-            sb.Append(String.Format("new {0}(){1}{{{1}", instanceType.FullName, Environment.NewLine));
+            sb.Append(String.Format("new {0}(){1}{{{1}", instanceType.FullName.Replace("+", "."), Environment.NewLine));
             var properties = TypeDescriptor.GetProperties(instance);
             foreach (PropertyDescriptor property in properties)
             {
@@ -50,7 +56,7 @@ namespace TheProject
                     sb.Append(",").Append(Environment.NewLine);
                 }
             }
-            sb.Append("}").Append(Environment.NewLine);
+            sb.Append("}");
         }
     }
 }
