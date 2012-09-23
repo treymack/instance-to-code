@@ -52,7 +52,20 @@ namespace TheProject
                 var propertyType = property.PropertyType;
                 if (typeof(IList).IsAssignableFrom(propertyType))
                 {
+                    var listType = propertyType.GenericTypeArguments[0];
+                    sb.Append(property.Name).Append(" = new List<")
+                        .Append(listType.FullName).AppendLine(">")
+                        .AppendLine("{");
 
+                    var list = (IList)property.GetValue(instance);
+                    foreach (var thisInstance in list)
+                    {
+                        sb.Append("{ ");
+                        BuildCode(sb, thisInstance);
+                        sb.Append(" }").Append(Environment.NewLine);
+                    }
+
+                    sb.Append("},").Append(Environment.NewLine);
                 }
                 else
                 {

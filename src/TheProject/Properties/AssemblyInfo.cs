@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using ApprovalTests.Reporters;
 
-[assembly: UseReporter(typeof(WinMergeReporter))]
+[assembly: UseReporter(typeof(DiffReporter))]
 
 
 // General Information about an assembly is controlled through the following 
