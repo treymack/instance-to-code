@@ -26,16 +26,21 @@ namespace TheProject
             }
 
             var instanceType = instance.GetType();
+
+            if (instanceType.IsEnum)
+            {
+                sb.Append(instanceType.FullName).Append(".").Append(instance);
+                return;
+            }
+
             if (instanceType.Equals(typeof(string)))
             {
-
                 sb.Append("\"").Append(instance).Append("\"");
                 return;
             }
 
             if (instanceType.IsValueType)
             {
-
                 sb.Append(instance);
                 return;
             }

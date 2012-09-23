@@ -53,6 +53,8 @@
   <ItemGroup>
     <Compile Include="Instance.ToCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\ClassWithEnums.cs" />
+    <Compile Include="Tests\ClassWithListsOfEnums.cs" />
     <Compile Include="Tests\ClassWithListsOfOtherClasses.cs" />
     <Compile Include="Tests\ClassWithListsOfValueTypes.cs" />
     <Compile Include="Tests\NestedClass.cs" />

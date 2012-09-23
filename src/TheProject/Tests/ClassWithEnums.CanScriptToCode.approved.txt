@@ -1,0 +1,5 @@
+new TheProject.Tests.EnumClass()
+{
+Enum1 = TheProject.Tests.Enum1.Value1,
+Enum2 = TheProject.Tests.Enum2.Value2,
+}
