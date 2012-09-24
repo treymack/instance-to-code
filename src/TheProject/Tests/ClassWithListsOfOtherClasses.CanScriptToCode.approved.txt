@@ -1,0 +1,34 @@
+new TheProject.Tests.ClassListClass()
+{
+Users = new List<TheProject.Tests.User2>
+{
+{
+new TheProject.Tests.User2()
+{
+Name = "tmack",
+Address = new TheProject.Tests.Address2()
+{
+AddressLine1 = "line1",
+},
+Personality = new TheProject.Tests.Personality2()
+{
+PersonalityDescriptor = "awesome",
+},
+}
+},
+{
+new TheProject.Tests.User2()
+{
+Name = null,
+Address = null,
+Personality = new TheProject.Tests.Personality2()
+{
+PersonalityDescriptor = "blank",
+},
+}
+},
+},
+Addresses = new List<TheProject.Tests.Address2>
+{
+},
+}

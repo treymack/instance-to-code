@@ -2,14 +2,26 @@ new TheProject.Tests.ValueListsClass()
 {
 Ints = new List<System.Int32>
 {
-{ 1 }
-{ 2 }
-{ 3 }
+{
+1
+},
+{
+2
+},
+{
+3
+},
 },
 Strings = new List<System.String>
 {
-{ "one" }
-{ "two" }
-{ "three" }
+{
+"one"
+},
+{
+"two"
+},
+{
+"three"
+},
 },
 }

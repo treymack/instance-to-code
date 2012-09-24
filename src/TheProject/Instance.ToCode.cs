@@ -13,11 +13,11 @@ namespace TheProject
         public static string ToCode(object instance)
         {
             var sb = new StringBuilder();
-            BuildCode(sb, instance);
+            BuildCode(sb, instance, new Indent());
             return sb.ToString();
         }
 
-        private static void BuildCode(StringBuilder sb, object instance)
+        private static void BuildCode(StringBuilder sb, object instance, Indent indent)
         {
             if (instance == null)
             {
@@ -45,8 +45,10 @@ namespace TheProject
                 return;
             }
 
-            sb.Append(String.Format("new {0}(){1}{{{1}", instanceType.FullName.Replace("+", "."), Environment.NewLine));
+            sb.AppendLine(String.Format("new {0}()", instanceType.FullName.Replace("+", ".")));
+            sb.AppendLine("{");
             var properties = TypeDescriptor.GetProperties(instance);
+            indent.Increase();
             foreach (PropertyDescriptor property in properties)
             {
                 var propertyType = property.PropertyType;
@@ -60,21 +62,56 @@ namespace TheProject
                     var list = (IList)property.GetValue(instance);
                     foreach (var thisInstance in list)
                     {
-                        sb.Append("{ ");
-                        BuildCode(sb, thisInstance);
-                        sb.Append(" }").Append(Environment.NewLine);
+                        sb.AppendLine("{");
+                        indent.Increase();
+
+                        BuildCode(sb, thisInstance, indent);
+                        sb.AppendLine();
+
+                        indent.Decrease();
+                        sb.AppendLine("},");
                     }
 
-                    sb.Append("},").Append(Environment.NewLine);
+                    sb.AppendLine("},");
                 }
                 else
                 {
                     sb.Append(property.Name).Append(" = ");
-                    BuildCode(sb, property.GetValue(instance));
-                    sb.Append(",").Append(Environment.NewLine);
+                    BuildCode(sb, property.GetValue(instance), indent);
+                    sb.AppendLine(",");
                 }
             }
+            indent.Decrease();
             sb.Append("}");
+        }
+
+        public class Indent
+        {
+            public string Current { get; set; }
+
+            public Indent()
+            {
+                Current = "";
+            }
+
+            public void Increase()
+            {
+                Current += "    ";
+            }
+
+            public void Decrease()
+            {
+                Current = Current.Substring(4);
+            }
+        }
+    }
+
+    public static class IndentExtensions
+    {
+        public static StringBuilder Indent(this StringBuilder sb, Instance.Indent indent)
+        {
+            sb.Append(indent.Current);
+            return sb;
         }
     }
 }

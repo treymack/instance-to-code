@@ -36,7 +36,7 @@ namespace TheProject.Tests
     {
         Value1,
     }
-  
+
     public class EnumClass
     {
         public Enum1 Enum1 { get; set; }
