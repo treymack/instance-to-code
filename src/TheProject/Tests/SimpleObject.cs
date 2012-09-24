@@ -19,6 +19,9 @@ namespace TheProject.Tests
                 Int1 = 1,
                 Double1 = 2.3,
                 String1 = "slim shady",
+                Date1 = new DateTime(2012, 1, 2, 3, 4, 50),
+                NullDate2 = null,
+                NullableDate3 = new DateTime(2012, 2, 3, 4, 5, 50),
             };
 
             var code = ITC.Instance.ToCode(instance);
@@ -32,5 +35,8 @@ namespace TheProject.Tests
         public int Int1 { get; set; }
         public string String1 { get; set; }
         public double Double1 { get; set; }
+        public DateTime Date1 { get; set; }
+        public DateTime? NullDate2 { get; set; }
+        public DateTime? NullableDate3 { get; set; }
     }
 }

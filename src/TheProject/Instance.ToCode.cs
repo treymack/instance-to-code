@@ -31,6 +31,14 @@ namespace ITC
                 return;
             }
 
+            if (instanceType.Equals(typeof(DateTime)))
+            {
+                DateTime dt = (DateTime)instance;
+                sb.Append(String.Format("new System.DateTime({0}, {1}, {2}, {3}, {4}, {5}, {6})",
+                    dt.Year, dt.Month, dt.Day, dt.Hour, dt.Minute, dt.Second, dt.Millisecond));
+                return;
+            }
+
             if (instanceType.Equals(typeof(string)))
             {
                 sb.Append("\"").Append(instance).Append("\"");
