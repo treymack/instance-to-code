@@ -52,7 +52,7 @@ namespace ITC
                 var propertyType = property.PropertyType;
                 if (typeof(IList).IsAssignableFrom(propertyType))
                 {
-                    var listType = propertyType.GenericTypeArguments[0];
+                    var listType = propertyType.GetGenericArguments()[0];
                     sb.Append(property.Name).Append(" = new List<")
                         .Append(listType.FullName).AppendLine(">")
                         .AppendLine("{");
