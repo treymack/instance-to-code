@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ApprovalTests.Reporters;
+using ApprovalTests;
 using NUnit.Framework;
 
 namespace TheProject.Tests
@@ -26,7 +23,7 @@ namespace TheProject.Tests
 
             var code = ITC.Instance.ToCode(instance);
 
-            ApprovalTests.Approvals.Verify(code);
+            Approvals.Verify(code);
         }
     }
 

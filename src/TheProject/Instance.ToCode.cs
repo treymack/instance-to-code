@@ -60,25 +60,43 @@ namespace ITC
                 var propertyType = property.PropertyType;
                 if (typeof(IList).IsAssignableFrom(propertyType))
                 {
-                    var listType = propertyType.GetGenericArguments()[0];
-                    sb.Append(property.Name).Append(" = new List<")
-                        .Append(listType.FullName).AppendLine(">")
-                        .AppendLine("{");
+                    sb.Append(property.Name).Append(" = ");
 
+                    var genericArguments = propertyType.GetGenericArguments();
                     var list = (IList)property.GetValue(instance);
-                    foreach (var thisInstance in list)
+                    if (list == null)
                     {
-                        sb.AppendLine("{");
-                        indent.Increase();
+                        sb.AppendLine("null, ");
+                    }
+                    else
+                    {
+                        if (genericArguments.Length == 0)
+                        {
+                            sb.Append("new ").Append(propertyType.GetElementType().FullName).AppendLine("[]");
+                        }
+                        else
+                        {
+                            var listType = genericArguments[0];
+                            sb.Append("new System.Collections.Generic.List<").Append(listType.FullName).AppendLine(">");
+                        }
 
-                        BuildCode(sb, thisInstance, indent);
-                        sb.AppendLine();
+                        sb.Append("{");
 
-                        indent.Decrease();
+                        foreach (var thisInstance in list)
+                        {
+                            //sb.AppendLine("{");
+                            indent.Increase();
+
+                            BuildCode(sb, thisInstance, indent);
+
+                            indent.Decrease();
+                            //sb.AppendLine("},");
+
+                            sb.AppendLine(", ");
+                        }
+
                         sb.AppendLine("},");
                     }
-
-                    sb.AppendLine("},");
                 }
                 else
                 {

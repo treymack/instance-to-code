@@ -1,9 +1,7 @@
 new TheProject.Tests.ClassListClass()
 {
-Users = new List<TheProject.Tests.User2>
-{
-{
-new TheProject.Tests.User2()
+Users = new System.Collections.Generic.List<TheProject.Tests.User2>
+{new TheProject.Tests.User2()
 {
 Name = "tmack",
 Address = new TheProject.Tests.Address2()
@@ -14,9 +12,7 @@ Personality = new TheProject.Tests.Personality2()
 {
 PersonalityDescriptor = "awesome",
 },
-}
-},
-{
+}, 
 new TheProject.Tests.User2()
 {
 Name = null,
@@ -25,10 +21,8 @@ Personality = new TheProject.Tests.Personality2()
 {
 PersonalityDescriptor = "blank",
 },
-}
+}, 
 },
-},
-Addresses = new List<TheProject.Tests.Address2>
-{
-},
+Addresses = new System.Collections.Generic.List<TheProject.Tests.Address2>
+{},
 }

@@ -16,6 +16,8 @@ namespace TheProject.Tests
             {
                 Ints = new List<int> { 1, 2, 3 },
                 Strings = new List<string> { "one", "two", "three" },
+                NullArray = null,
+                Array1 = new int[] { 1, 2 },
             };
 
             var code = ITC.Instance.ToCode(instance);
@@ -28,5 +30,7 @@ namespace TheProject.Tests
     {
         public List<int> Ints { get; set; }
         public List<string> Strings { get; set; }
+        public int[] NullArray { get; set; }
+        public int[] Array1 { get; set; }
     }
 }
