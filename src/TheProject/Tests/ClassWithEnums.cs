@@ -20,7 +20,7 @@ namespace TheProject.Tests
                 Enum2 = Enum2.Value2,
             };
 
-            var code = Instance.ToCode(instance);
+            var code = ITC.Instance.ToCode(instance);
 
             Approvals.Verify(code);
         }

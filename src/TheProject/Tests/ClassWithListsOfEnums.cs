@@ -29,7 +29,7 @@ namespace TheProject.Tests
                 EmptyList = new List<Enum1> { },
             };
 
-            var code = Instance.ToCode(instance);
+            var code = ITC.Instance.ToCode(instance);
 
             Approvals.Verify(code);
         }

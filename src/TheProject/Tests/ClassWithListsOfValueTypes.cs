@@ -21,7 +21,7 @@ namespace TheProject.Tests
                 Strings = new List<string> { "one", "two", "three" },
             };
 
-            var code = Instance.ToCode(instance);
+            var code = ITC.Instance.ToCode(instance);
 
             Approvals.Verify(code);
         }

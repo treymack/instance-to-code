@@ -40,7 +40,7 @@ namespace TheProject.Tests
                 Addresses = new List<Address2> { },
             };
 
-            var code = Instance.ToCode(instance);
+            var code = ITC.Instance.ToCode(instance);
 
             Approvals.Verify(code);
         }

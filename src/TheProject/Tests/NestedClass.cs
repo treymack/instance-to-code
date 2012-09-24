@@ -16,7 +16,7 @@ namespace TheProject.Tests
         {
             var instance = new NestedClassTestCase();
 
-            var code = Instance.ToCode(instance);
+            var code = ITC.Instance.ToCode(instance);
 
             Approvals.Verify(code);
         }

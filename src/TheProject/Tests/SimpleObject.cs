@@ -21,7 +21,7 @@ namespace TheProject.Tests
                 String1 = "slim shady",
             };
 
-            var code = Instance.ToCode(instance);
+            var code = ITC.Instance.ToCode(instance);
 
             ApprovalTests.Approvals.Verify(code);
         }
