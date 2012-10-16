@@ -1,0 +1,4 @@
+new TheProject.Tests.GetterClass()
+{
+IntProp = 1,
+}

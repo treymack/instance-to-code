@@ -98,7 +98,7 @@ namespace ITC
                         sb.AppendLine("},");
                     }
                 }
-                else
+                else if (!property.IsReadOnly)
                 {
                     sb.Append(property.Name).Append(" = ");
                     BuildCode(sb, property.GetValue(instance), indent);

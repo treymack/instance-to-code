@@ -60,6 +60,7 @@
     <Compile Include="Tests\ClassWithListsOfEnums.cs" />
     <Compile Include="Tests\ClassWithListsOfOtherClasses.cs" />
     <Compile Include="Tests\ClassWithListsOfValueTypes.cs" />
+    <Compile Include="Tests\ClassWithPrivateOrNoSetter.cs" />
     <Compile Include="Tests\NestedClass.cs" />
     <Compile Include="Tests\NullProperties.cs" />
     <Compile Include="Tests\ObjectGraph.cs" />

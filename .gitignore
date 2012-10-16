@@ -8,3 +8,5 @@ TestResults
 *.suo
 *.user
 /packages
+
+_Resharper*
