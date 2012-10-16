@@ -5,7 +5,6 @@ using NUnit.Framework;
 namespace TheProject.Tests
 {
     [TestFixture]
-    [UseReporter(typeof(DiffReporter))]
     public class ClassWithPrivateOrNoSetter
     {
         [Test]

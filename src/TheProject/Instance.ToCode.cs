@@ -39,6 +39,12 @@ namespace ITC
                 return;
             }
 
+            if (instanceType.Equals(typeof(Decimal)))
+            {
+                sb.Append(instance).Append("m");
+                return;
+            }
+
             if (instanceType.Equals(typeof(string)))
             {
                 sb.Append("\"").Append(instance).Append("\"");
