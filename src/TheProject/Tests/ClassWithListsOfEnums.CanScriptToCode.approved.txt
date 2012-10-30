@@ -1,5 +1,7 @@
 new TheProject.Tests.EnumListClass()
 {
+EmptyList = new System.Collections.Generic.List<TheProject.Tests.Enum1>
+{},
 EnumList1 = new System.Collections.Generic.List<TheProject.Tests.Enum1>
 {TheProject.Tests.Enum1.Value1, 
 TheProject.Tests.Enum1.Value1, 
@@ -8,6 +10,4 @@ EnumList2 = new System.Collections.Generic.List<TheProject.Tests.Enum2>
 {TheProject.Tests.Enum2.Value2, 
 TheProject.Tests.Enum2.Value1, 
 },
-EmptyList = new System.Collections.Generic.List<TheProject.Tests.Enum1>
-{},
 }

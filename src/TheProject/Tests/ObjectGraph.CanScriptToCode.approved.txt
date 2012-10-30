@@ -1,10 +1,10 @@
 new TheProject.Tests.User2()
 {
-Name = "Trey",
 Address = new TheProject.Tests.Address2()
 {
 AddressLine1 = "123 My Street",
 },
+Name = "Trey",
 Personality = new TheProject.Tests.Personality2()
 {
 PersonalityDescriptor = "Intense",

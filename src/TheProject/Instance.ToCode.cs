@@ -59,7 +59,9 @@ namespace ITC
 
             sb.AppendLine(String.Format("new {0}()", instanceType.FullName.Replace("+", ".")));
             sb.AppendLine("{");
-            var properties = TypeDescriptor.GetProperties(instance);
+            var properties = TypeDescriptor.GetProperties(instance)
+                .OfType<PropertyDescriptor>()
+                .OrderBy(p => p.Name);
             indent.Increase();
             foreach (PropertyDescriptor property in properties)
             {
