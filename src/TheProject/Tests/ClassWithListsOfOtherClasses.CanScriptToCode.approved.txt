@@ -9,6 +9,7 @@ Address = new TheProject.Tests.Address2()
 {
 AddressLine1 = "line1",
 },
+ByteArray = null, 
 Name = "tmack",
 Personality = new TheProject.Tests.Personality2()
 {
@@ -18,6 +19,7 @@ PersonalityDescriptor = "awesome",
 new TheProject.Tests.User2()
 {
 Address = null,
+ByteArray = null, 
 Name = null,
 Personality = new TheProject.Tests.Personality2()
 {

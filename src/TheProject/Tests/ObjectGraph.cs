@@ -22,6 +22,7 @@ namespace TheProject.Tests
                 {
                     PersonalityDescriptor = "Intense",
                 },
+                ByteArray = new byte[] { 1, 2, 3 },
             };
 
             var code = ITC.Instance.ToCode(instance);
@@ -34,8 +35,8 @@ namespace TheProject.Tests
     {
         public string Name { get; set; }
         public Address2 Address { get; set; }
-
         public Personality2 Personality { get; set; }
+        public byte[] ByteArray { get; set; }
     }
 
     public class Address2

@@ -33,7 +33,7 @@ namespace ITC
 
             if (instanceType.Equals(typeof(DateTime)))
             {
-                DateTime dt = (DateTime)instance;
+                var dt = (DateTime)instance;
                 sb.Append(String.Format("new System.DateTime({0}, {1}, {2}, {3}, {4}, {5}, {6})",
                     dt.Year, dt.Month, dt.Day, dt.Hour, dt.Minute, dt.Second, dt.Millisecond));
                 return;
@@ -75,6 +75,12 @@ namespace ITC
                     if (list == null)
                     {
                         sb.AppendLine("null, ");
+                    }
+                    else if (propertyType.Equals(typeof(byte[])))
+                    {
+                        var bytes = (byte[])list;
+                        sb.AppendLine(String.Format("Convert.FromBase64String(\"{0}\")",
+                            Convert.ToBase64String(bytes)));
                     }
                     else
                     {

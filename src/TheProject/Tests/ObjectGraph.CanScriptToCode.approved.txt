@@ -4,6 +4,7 @@ Address = new TheProject.Tests.Address2()
 {
 AddressLine1 = "123 My Street",
 },
+ByteArray = Convert.FromBase64String("AQID")
 Name = "Trey",
 Personality = new TheProject.Tests.Personality2()
 {
